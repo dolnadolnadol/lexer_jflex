@@ -1,10 +1,6 @@
-A + B
--
-*_5
-if
-then
-id1
-id2
-id1
-"Hello World"
-/* comment */
+variableName
+123 456 789
+if (x > 10) { y = 2 * x; }
+123abc
+/* This is a comment */ x = 42
+test
