@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.ArrayList;
 
 %%
@@ -15,7 +14,7 @@ operator = \+ | \- | \* | \/ | = | <= | >= | < | > | == | \++ | \--
 reserved =  "if"|"then"|"else"|"endif"|"while"|"do"|"endwhile"|"print"|"newline"|"read"
 NUM = [0-9]+
 LineTerminator = \r|\n|\r\n
-whiteSpace = {LineTerminator} | [ \t\f]
+whiteSpace = {LineTerminator} | [ \t]
 
 %%
 
