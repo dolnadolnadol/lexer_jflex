@@ -22,10 +22,6 @@ whiteSpace = {LineTerminator} | [ \t\f]
 {operator}                          {   System.out.println("operator: "+ yytext()); }
 {reserved}                          {   System.out.println("keyword: "+yytext());   }
 {NUM}                               {   System.out.println("Integer: "+yytext());   }
-{NUM} + (".") + ([0-9]+)?           {   System.out.println("ERROR CHARACTERS: " + yytext());
-                                        System.out.println("TERMINATE");
-                                        System.exit(1);
-                                    }
 [A-Za-z] + ([A-Za-z0-9]+)?          { 
                                         String identifier = yytext();
                                         if (symbolTable.contains(identifier)) {
@@ -35,16 +31,13 @@ whiteSpace = {LineTerminator} | [ \t\f]
                                             symbolTable.add(identifier);
                                         }
                                     }
-[0-9] + ([A-Za-z0-9]+)?             { 
-                                        System.out.println("ERROR CHARACTERS: " + yytext());
-                                        System.out.println("TERMINATE");
-                                        System.exit(1);
-                                    }
 \"[^\"]*\"                          { System.out.println("string: " + yytext()); }
-\( | \) | ;                         { System.out.println("semi or colon: " + yytext()); }
+\( | \) | ;                         { System.out.println("bracket , semicolon: " + yytext()); }
 \/\*.*\*\/ | \/\/[^\n]*\n           {/* ignore comments */}
 {whiteSpace}                        { /* ignore newlines */ }
-.                                   { 
+
+. | [0-9] + ([A-Za-z0-9]+)? | {NUM} + (".") + ([0-9]+)?
+                                    { 
                                         System.out.println("ERROR CHARACTERS: " + yytext());
                                         System.out.println("TERMINATE");
                                         System.exit(1);

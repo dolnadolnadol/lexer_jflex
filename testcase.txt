@@ -1,6 +1,7 @@
 variableName
 123 456 789
-if (x > 10) { y = 2 * x; }
-123abc
+if(x> 10 ) 
+//{ y = 2 * x; }
+//123abc
 /* This is a comment */ x = 42
 test
