@@ -34,7 +34,7 @@ whiteSpace = {LineTerminator} | [ \t]
 \/\*.*\*\/ | \/\/[^\n]*\n           {/* ignore comments */}
 {whiteSpace}                        { /* ignore newlines */ }
 
-. | [0-9] + ([A-Za-z0-9]+)? | {NUM} + (".") + ([0-9]+)?
+. | [0-9] + ([A-Za-z0-9]+) | {NUM} + (".") + ([0-9]+)?
                                     { 
                                         System.out.println("ERROR CHARACTERS: " + yytext());
                                         System.out.println("TERMINATE");
