@@ -5,7 +5,6 @@ import java.util.ArrayList;
 %class generatejava
 %standalone
 %unicode
-%char
 %{
     ArrayList<String> symbolTable = new ArrayList<String>();
 %}
