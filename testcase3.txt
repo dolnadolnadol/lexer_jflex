@@ -1,7 +1,7 @@
 if while else
-+ - *
-This is a comment
-()
-"Hello, "World"!"
-= ==
-; ,
+//+ - *
+//This is a comment
+//()
+//"Hello, "World"!"
+//= ==
+//; ,
